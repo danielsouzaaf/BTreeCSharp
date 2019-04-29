@@ -4,19 +4,19 @@ using System.Text;
 
 namespace BTree
 {
-    class No<TK, TC>
+    class No<TC, TV>
     {
         private int t;
 
-        public List<No<TK, TC>> Filhos { get; set; }
+        public List<No<TC, TV>> Filhos { get; set; }
 
-        public List<Entrada<TK, TC>> Entradas { get; set; }
+        public List<Entrada<TC, TV>> Entradas { get; set; }
 
         public No(int t)
         {
             this.t = t;
-            this.Filhos = new List<No<TK, TC>>(t);
-            this.Entradas = new List<Entrada<TK, TC>>(t);
+            this.Filhos = new List<No<TC, TV>>(t);
+            this.Entradas = new List<Entrada<TC, TV>>(t);
         }
 
         public Boolean ehFolha
