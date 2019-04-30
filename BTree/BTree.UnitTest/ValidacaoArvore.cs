@@ -9,7 +9,7 @@ namespace BTree.UnitTest
         public static void ValidarArvore(No<int, int> arvore, int T, params int[] chavesEsperadas)
         {
             var chavesEncontradas = new Dictionary<int, List<Entrada<int, int>>>();
-            ValidateSubtree(arvore, arvore, T, int.MinValue, int.MaxValue, chavesEncontradas);
+            ValidarSubArvore(arvore, arvore, T, int.MinValue, int.MaxValue, chavesEncontradas);
 
             Assert.AreEqual(0, chavesEsperadas.Except(chavesEncontradas.Keys).Count());
             foreach (var keyValuePair in chavesEncontradas)

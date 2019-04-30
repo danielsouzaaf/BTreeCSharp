@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BTree
 {
-    class Arvore<TC, TV> where TC : IComparable<TC>
+    public class Arvore<TC, TV> where TC : IComparable<TC>
     {
         public Arvore(int T)
         {
@@ -32,6 +32,7 @@ namespace BTree
             if (!this.Root.atingiuMaximoEntradas)
             {
                 this.inserirInternal(this.Root, chave, valor);
+                return;
             }
 
             // criar um novo nó e dividir a raíz antiga
