@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BTree
 {
-    class No<TC, TV>
+    public class No<TC, TV>
     {
         private int t;
 
